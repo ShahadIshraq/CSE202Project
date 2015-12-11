@@ -65,7 +65,7 @@ public class Match {
     public void setMinute(int minute) {
         this.minute = minute;
         simpleMinute.set(String.valueOf(minute));
-    }
+;    }
 
     public String getSimpleFirstTeam() {
         return simpleFirstTeam.get();

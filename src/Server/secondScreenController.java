@@ -128,6 +128,8 @@ public class secondScreenController {
                                     // action of 'Select' button click
                                     btn.setOnAction((ActionEvent event) -> {
                                                 System.out.println("hello");
+                                                Match match= getTableView().getItems().get(getIndex());
+                                                league.removeMatch(match);
                                             }
                                     );
                                     setGraphic(btn);
@@ -147,12 +149,7 @@ public class secondScreenController {
     @FXML
     void addMatchAction(ActionEvent event) {
         Match match= new Match(addTeam1.getText(), addTeam2.getText());
-     /*
-       System.out.println(league.toString());
-       System.out.println(match.toString());
-       */
         league.addMatch(match);
-
     }
     @FXML
     void backAction(ActionEvent event) {

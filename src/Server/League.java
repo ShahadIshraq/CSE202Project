@@ -27,6 +27,7 @@ public class League {
     public void addMatch(Match match){
         matches.add(match);
     }
+    public void removeMatch(Match match){matches.remove(match);}
     public String getName(){
         return this.name;
     }

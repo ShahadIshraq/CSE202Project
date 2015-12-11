@@ -74,6 +74,13 @@ public class FirstMain extends Application {
         controller.score1.setText(match.getSimpleScoreFirst());
         controller.score2.setText(match.getSimpleScoreLast());
 
+        controller.pxi1.setVisible(false);
+        controller.pxi2.setVisible(false);
+        controller.newPlayer1.setVisible(false);
+        controller.newPlayer2.setVisible(false);
+        controller.adp1.setVisible(false);
+        controller.adp2.setVisible(false);
+
         stage.setTitle("Match Score");
         stage.setScene(new Scene(root, 600, 500));
         stage.show();

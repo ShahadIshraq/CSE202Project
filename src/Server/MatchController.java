@@ -9,6 +9,7 @@ package Server;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
@@ -34,8 +35,8 @@ public class MatchController {
     @FXML
     private TextArea field;
 
-    @FXML
-    private Button commentry;
+    //@FXML
+    //private Button commentry;
 
     @FXML
     private Button summarry;
@@ -51,6 +52,42 @@ public class MatchController {
 
     @FXML
     private Button backButton;
+
+    @FXML
+    public ListView<String> pxi1;
+
+    @FXML
+    public ListView<String> pxi2;
+
+    @FXML
+    public TextField newPlayer1;
+
+    @FXML
+    public TextField newPlayer2;
+
+    @FXML
+    public Button adp1;
+
+    @FXML
+    public Button adp2;
+
+    @FXML
+    void addPlayer1(ActionEvent event) {
+    String name=newPlayer1.getText();
+        if(name!=null){
+            pxi1.getItems().add(name);
+            newPlayer1.setText(null);
+        }
+    }
+
+    @FXML
+    void addPlayer2(ActionEvent event) {
+        String name=newPlayer2.getText();
+        if(name!=null){
+            pxi2.getItems().add(name);
+            newPlayer2.setText(null);
+        }
+    }
 
     League league;
     Match Match;
@@ -86,28 +123,55 @@ public class MatchController {
         field.setText(field.getText()+addField.getText()+'\n');
     }
 
-    @FXML
+   /* @FXML
     void showCommentry(ActionEvent event) {
 
     }
-
+*/
     @FXML
     void showPlayingXI(ActionEvent event) {
 
+        pxi1.setVisible(true);
+        pxi2.setVisible(true);
+        newPlayer1.setVisible(true);
+        newPlayer2.setVisible(true);
+        adp1.setVisible(true);
+        adp2.setVisible(true );
+        field.setVisible(false);
+        addField.setVisible(false);
+        addButton.setVisible(false);
     }
 
     @FXML
     void showSummarry(ActionEvent event) {
 
+        pxi1.setVisible(false);
+        pxi2.setVisible(false);
+        newPlayer1.setVisible(false);
+        newPlayer2.setVisible(false);
+        adp1.setVisible(false);
+        adp2.setVisible(false);
+        field.setVisible(true);
+        addField.setVisible(true);
+        addButton.setVisible(true);
     }
 
     @FXML
     void updateAction(ActionEvent event) {
-
+        int sc1=Integer.parseInt(score1.getText());
+        int sc2=Integer.parseInt(score2.getText());
+        getMatch().setScoreFirst(sc1);
+        getMatch().setScoreLast(sc2);
+        int t=Integer.parseInt(timer.getText());
+        getMatch().setMinute(t);
     }
 
     @FXML
     void backAction(ActionEvent event) {
-
+        try {
+            firstMain.showSecondPage(league);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
