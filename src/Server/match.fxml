@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="583.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.MatchController">
+   <children>
+      <Label layoutX="236.0" layoutY="38.0" text="Match Details">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="timer" layoutX="32.0" layoutY="76.0" prefHeight="25.0" prefWidth="52.0" promptText="timer" />
+      <TextField fx:id="firstTeam" layoutX="97.0" layoutY="76.0" prefHeight="25.0" prefWidth="128.0" />
+      <TextField fx:id="score1" layoutX="238.0" layoutY="76.0" prefHeight="25.0" prefWidth="52.0" />
+      <TextField fx:id="score2" layoutX="303.0" layoutY="76.0" prefHeight="25.0" prefWidth="52.0" />
+      <TextField fx:id="lastTeam" layoutX="366.0" layoutY="76.0" prefHeight="25.0" prefWidth="128.0" />
+      <Button fx:id="update" layoutX="508.0" layoutY="76.0" mnemonicParsing="false" onAction="#updateAction" text="Update" />
+      <TextArea fx:id="field" layoutX="84.0" layoutY="134.0" prefHeight="200.0" prefWidth="406.0" />
+      <ButtonBar layoutX="147.0" layoutY="350.0" prefHeight="40.0" prefWidth="281.0">
+        <buttons>
+            <Button fx:id="commentry" mnemonicParsing="false" onAction="#showCommentry" text="Commentry" />
+            <Button fx:id="summarry" mnemonicParsing="false" onAction="#showSummarry" text="Summarry" />
+          <Button fx:id="playingXI" mnemonicParsing="false" onAction="#showPlayingXI" prefHeight="26.0" prefWidth="88.0" text="Playing XI" />
+        </buttons>
+      </ButtonBar>
+      <TextArea fx:id="addField" layoutX="84.0" layoutY="390.0" prefHeight="40.0" prefWidth="406.0" />
+      <Button fx:id="addButton" layoutX="517.0" layoutY="398.0" mnemonicParsing="false" onAction="#addAction" text="Add" />
+      <Button fx:id="backButton" layoutX="22.0" layoutY="430.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+   </children>
+</AnchorPane>
