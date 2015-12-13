@@ -4,7 +4,9 @@
  */
 package Server;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
@@ -40,4 +42,17 @@ public class MatchController {
     public void setMatch(Match match) {
         this.match = match;
     }
+
+    @FXML
+    private Button backButton;
+
+    @FXML
+    void backAction(ActionEvent event) {
+        try {
+            main.showHomePage();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

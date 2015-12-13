@@ -14,7 +14,9 @@ import java.util.Hashtable;
 
 public class Main extends Application {
     Stage stage;
+
     Hashtable<Contributor, Match> cTable=new Hashtable<>();
+    Hashtable<Match, Contributor> mTable=new Hashtable<>();
     ObservableList<Match> matches= FXCollections.observableArrayList();
 
     public static void main(String[] args) {
@@ -30,6 +32,8 @@ public class Main extends Application {
             System.out.println("here");
             e.printStackTrace();
         }
+
+
 
 
     }
@@ -60,7 +64,7 @@ public class Main extends Application {
         controller.score1.setText(match.getSimpleScoreFirst());
         controller.score2.setText(match.getSimpleScoreLast());
         stage.setTitle("LIVE SCORE");
-        stage.setScene(new Scene(root, 600, 500));
+        stage.setScene(new Scene(root, 600, 400));
         stage.show();
     }
 }

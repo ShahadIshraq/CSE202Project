@@ -70,6 +70,11 @@ public class HomeController {
         Match match=new Match(addTeam1.getText(), addTeam2.getText());
         main.matches.add(match);
         main.cTable.put(contributor, match);
+        main.mTable.put(match,contributor);
+        addTeam1.setText(null);
+        addTeam2.setText(null);
+        contributorName.setText(null);
+        contributorPassword.setText(null);
     }
 
     @FXML
@@ -137,8 +142,14 @@ public class HomeController {
                                 }
                                 else {
                                     // action of 'Select' button click
+
                                     btn.setOnAction((ActionEvent event) -> {
-                                                System.out.println("hello");
+                                        System.out.println("hello");
+                                        Match match= getTableView().getItems().get(getIndex());
+                                        Contributor contributor=main.mTable.get(match);
+                                        main.matches.remove(match);
+                                        main.cTable.remove(contributor);
+                                        main.mTable.remove(match);
 
                                             }
                                     );
