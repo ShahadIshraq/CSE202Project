@@ -1,25 +1,42 @@
 package Server;
 
 /**
- * Created by ABIR BINDU on 12/7/2015.
+ * Created by ABIR BINDU on 12/14/2015.
  */
 
-import com.sun.org.apache.xpath.internal.SourceTree;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
-import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.util.Callback;
 
-public class secondScreenController {
+        import javafx.collections.ObservableList;
+        import javafx.event.ActionEvent;
+        import javafx.fxml.FXML;
+        import javafx.scene.control.*;
+        import javafx.scene.control.cell.PropertyValueFactory;
+        import javafx.util.Callback;
 
-    FirstMain firstMain;
-    void setFirstMain(FirstMain firstMain ){
-        this.firstMain=firstMain;
-    }
+public class HomeController {
+
+    @FXML
+    private TableView<Match> Scorecard;
+
+    @FXML
+    private TableColumn<Match,Integer> Time;
+
+    @FXML
+    private TableColumn<Match,String> Team1;
+
+    @FXML
+    private TableColumn<Match,Integer> Score1;
+
+    @FXML
+    private TableColumn<Match,Integer> Score2;
+
+    @FXML
+    private TableColumn<Match,String> Team2;
+
+    @FXML
+    private TableColumn<Match,String> Explore;
+
+    @FXML
+    private TableColumn<Match,String> Remove;
 
     @FXML
     private TextField addTeam1;
@@ -31,37 +48,30 @@ public class secondScreenController {
     private Button addMatchButton;
 
     @FXML
-    private TableView Scorecard;
+    private TextField contributorName;
 
     @FXML
-    private TableColumn<Match, Integer> Time;
+    private TextField contributorPassword;
 
-    @FXML
-    private TableColumn<Match, String> Team1;
+    Main main;
 
-    @FXML
-    private TableColumn<Match, Integer> Score1;
-
-    private League league;
-    void setLeague(League league){
-        this.league=league;
-        Scorecard.setItems(league.getMatches());
+    public void setMain(Main main) {
+        this.main = main;
+    }
+    public void setMatches(ObservableList<Match> matches){
+        Scorecard.setItems(matches);
     }
 
 
     @FXML
-    private TableColumn<Match, Integer> Score2;
+    void addMatchAction(ActionEvent event) {
 
-    @FXML
-    private TableColumn<Match, String> Team2;
+        Contributor contributor=new Contributor(contributorName.getText(),contributorPassword.getText());
+        Match match=new Match(addTeam1.getText(), addTeam2.getText());
+        main.matches.add(match);
+        main.cTable.put(contributor, match);
+    }
 
-    @FXML
-    private TableColumn<Match, String> Explore;
-
-    @FXML
-    private TableColumn<Match, String> Remove;
-    @FXML
-    private Button backButton;
     @FXML
     public void initialize(){
         Time.setCellValueFactory(new PropertyValueFactory<Match, Integer>("simpleMinute"));
@@ -72,7 +82,7 @@ public class secondScreenController {
         Explore.setCellValueFactory(new PropertyValueFactory<Match, String>("explore"));
 
 
-        Callback <TableColumn<Match, String>, TableCell<Match, String>> cellFactory =
+        Callback<TableColumn<Match, String>, TableCell<Match, String>> cellFactory =
                 new Callback<TableColumn<Match, String>, TableCell<Match, String>>() {
                     @Override
                     public TableCell call( final TableColumn<Match, String> param ) {
@@ -89,10 +99,11 @@ public class secondScreenController {
                                 else {
                                     // action of 'Select' button click
                                     btn.setOnAction((ActionEvent event) -> {
-                                       // System.out.println("hi");
-                                        Match match= getTableView().getItems().get(getIndex());
+                                                // System.out.println("hi");
+                                                Match match= getTableView().getItems().get(getIndex());
                                                 try {
-                                                    firstMain.showMatchPage(league, match);
+                                                    System.out.println("hi");
+                                                    main.showMatchPage(match);
                                                 } catch (Exception e) {
                                                     e.printStackTrace();
                                                 }
@@ -106,9 +117,9 @@ public class secondScreenController {
                         return cell;
                     }
                 };
-       Explore.setCellFactory(cellFactory);
+        Explore.setCellFactory(cellFactory);
 
-      Remove.setCellValueFactory(new PropertyValueFactory<Match, String>("remove"));
+        Remove.setCellValueFactory(new PropertyValueFactory<Match, String>("remove"));
 
         Callback <TableColumn<Match, String>, TableCell<Match, String>> cellFactory2 =
                 new Callback<TableColumn<Match, String>, TableCell<Match, String>>() {
@@ -128,8 +139,7 @@ public class secondScreenController {
                                     // action of 'Select' button click
                                     btn.setOnAction((ActionEvent event) -> {
                                                 System.out.println("hello");
-                                                Match match= getTableView().getItems().get(getIndex());
-                                                league.removeMatch(match);
+
                                             }
                                     );
                                     setGraphic(btn);
@@ -145,18 +155,5 @@ public class secondScreenController {
 
     }
 
-
-    @FXML
-    void addMatchAction(ActionEvent event) {
-        Match match= new Match(addTeam1.getText(), addTeam2.getText());
-        league.addMatch(match);
-    }
-    @FXML
-    void backAction(ActionEvent event) {
-        try {
-            firstMain.showFirstPage();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
+
