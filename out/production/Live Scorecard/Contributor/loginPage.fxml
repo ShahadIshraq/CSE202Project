@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="pain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="301.0" style="-fx-background-image: url('football1.jpg');" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contributor.loginController">
+   <children>
+      <Label layoutX="21.0" layoutY="28.0" text="User Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label layoutX="21.0" layoutY="78.0" text="Password :" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <TextField fx:id="userName" layoutX="104.0" layoutY="24.0" prefHeight="25.0" prefWidth="189.0" />
+      <PasswordField fx:id="password" layoutX="104.0" layoutY="74.0" prefHeight="25.0" prefWidth="189.0" />
+      <Button fx:id="cancelButton" layoutX="78.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonAction" style="-fx-background-color: #771;" text="Cancel" textFill="#20bfaf" />
+      <Button fx:id="loginButton" layoutX="173.0" layoutY="141.0" mnemonicParsing="false" onAction="#buttonAction" style="-fx-background-color: #771;" text="Log in" textFill="#28dabf" />
+   </children>
+</AnchorPane>
