@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="600.0" style="-fx-background-image: url('football2.jpg');" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contributor.MatchPageController">
+   <children>
+      <Label layoutX="232.0" layoutY="38.0" text="ScoreCard">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="team1" layoutX="181.0" layoutY="104.0" text="team1" />
+      <Label fx:id="team2" layoutX="368.0" layoutY="104.0" text="team2" />
+      <Label fx:id="score1" layoutX="258.0" layoutY="104.0" text="score1" />
+      <Label fx:id="score2" layoutX="313.0" layoutY="104.0" text="score2" />
+      <Button fx:id="updateTimeButton" layoutX="105.0" layoutY="151.0" mnemonicParsing="false" onAction="#updateTimeAction" text="Update time" />
+      <Button fx:id="agt1" layoutX="198.0" layoutY="151.0" mnemonicParsing="false" onAction="#addGoalTeam1" text="Add Goal team1" />
+      <Button fx:id="agt2" layoutX="305.0" layoutY="151.0" mnemonicParsing="false" onAction="#addGoalTeam2" text="Add Goal Team2" />
+      <Button fx:id="logout" layoutX="529.0" layoutY="306.0" mnemonicParsing="false" onAction="#logoutAction" opacity="0.68" text="Log out" />
+      <Label fx:id="timer" layoutX="105.0" layoutY="104.0" text="0:0" />
+      <Button fx:id="start" layoutX="478.0" layoutY="151.0" mnemonicParsing="false" onAction="#startAction" text="Start" />
+   </children>
+</AnchorPane>
