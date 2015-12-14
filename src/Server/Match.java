@@ -110,6 +110,17 @@ public class Match {
     public int getMinute() {
         return minute;
     }
+    /*
+    public void addGoalTeam1(){
+        this.setScoreFirst(this.getScoreFirst()+1);
+    }
+    public void addGoalTeam2(){
+        this.setScoreLast(this.getScoreLast()+1);
+    }
+    public void updateTime(int minute){
+        this.setMinute(minute);
+    }
+    */
 
     @Override
     public String toString() {
