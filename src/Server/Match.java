@@ -124,7 +124,7 @@ public class Match {
 
     @Override
     public String toString() {
-        String string=minute+' '+firstTeam+' '+scoreFirst+':'+scoreLast+' '+lastTeam;
+        String string=firstTeam+"vs"+lastTeam;
         return string;
     }
 }

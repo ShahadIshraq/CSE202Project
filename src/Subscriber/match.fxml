@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="492.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Subscriber.MatchController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="496.0" style="-fx-background-image: football4;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Subscriber.MatchController">
    <children>
-      <TextArea fx:id="Commentry" layoutX="60.0" layoutY="144.0" prefHeight="200.0" prefWidth="372.0" />
+      <ImageView fitHeight="418.0" fitWidth="475.0" layoutX="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Football.jpg" />
+         </image>
+      </ImageView>
       <ButtonBar layoutX="36.0" layoutY="83.0">
          <buttons>
             <Label fx:id="time" text="Time" />
@@ -19,15 +23,11 @@
             <Label fx:id="team2" text="Team2" />
          </buttons>
       </ButtonBar>
-      <Label layoutX="199.0" layoutY="106.0" text="Commentry" textFill="#292fa4" underline="true">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
       <Label layoutX="148.0" layoutY="28.0" prefHeight="36.0" prefWidth="212.0" text="LIVE SCORECARD" textFill="#a42e2e">
          <font>
             <Font name="Script MT Bold" size="24.0" />
          </font>
       </Label>
+      <Button fx:id="back" layoutX="25.0" layoutY="355.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
    </children>
 </AnchorPane>

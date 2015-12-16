@@ -13,7 +13,13 @@ package Subscriber;
 public class FirstController {
 
     @FXML
-    private ListView<?> ScoreCard;
+    public ListView<String> ScoreCard;
+
+    Main main;
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
 
     @FXML
     private Button exploreButton;
@@ -24,11 +30,20 @@ public class FirstController {
     @FXML
     void backAction(ActionEvent event) {
 
+
+        //Here will be the code of exit of client
     }
 
     @FXML
     void exploreAction(ActionEvent event) {
 
+        String matchName=ScoreCard.getSelectionModel().getSelectedItem();
+        Match match=main.mTable.get(matchName);
+        try {
+            main.showMatchPage(match);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
