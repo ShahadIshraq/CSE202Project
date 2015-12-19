@@ -116,4 +116,17 @@ public class Match {
         String string=firstTeam+"vs"+lastTeam;
         return string;
     }
+
+    public boolean isEqualTo(Match m)
+    {
+        if(m.firstTeam.equals(this.firstTeam) && m.lastTeam.equals(this.getLastTeam())) return true;
+        else return false;
+    }
+
+    public void updateMatch(Match match)
+    {
+        this.setScoreFirst(match.getScoreFirst());
+        this.setScoreLast(match.getScoreLast());
+        this.setMinute(match.getMinute());
+    }
 }

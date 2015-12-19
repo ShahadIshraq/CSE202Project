@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -12,12 +13,26 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="minute" layoutX="93.0" layoutY="97.0" text="Minute" />
-      <Label fx:id="team1" layoutX="170.0" layoutY="97.0" text="Team1" />
-      <Label fx:id="team2" layoutX="435.0" layoutY="97.0" text="Team2" />
-      <Label fx:id="score1" layoutX="243.0" layoutY="97.0" text="score1" />
-      <Label fx:id="score2" layoutX="337.0" layoutY="97.0" text="score2" />
+      <ButtonBar layoutX="67.0" layoutY="102.0">
+         <buttons>
+            <Label fx:id="minute" text="Minute" textFill="#8d2020" />
+            <Label fx:id="team1" text="Team1" textFill="#8d2020" />
+            <Label fx:id="score1" text="score1" textFill="#8d2020" />
+            <Label fx:id="score2" text="score2" textFill="#8d2020" />
+            <Label fx:id="team2" text="Team2" textFill="#8d2020" />
+         </buttons>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ButtonBar>
       <TextArea fx:id="commentry" layoutX="79.0" layoutY="125.0" prefHeight="200.0" prefWidth="411.0" />
-      <Label layoutX="93.0" layoutY="74.0" text="Time" />
+      <Button fx:id="backButton" layoutX="67.0" layoutY="344.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
    </children>
 </AnchorPane>
