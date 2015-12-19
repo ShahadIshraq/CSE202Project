@@ -116,12 +116,22 @@ public class Match {
         String string=firstTeam+"vs"+lastTeam;
         return string;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> NetworkAndTime
     public boolean isEqualTo(Match m)
     {
         if(m.firstTeam.equals(this.firstTeam) && m.lastTeam.equals(this.getLastTeam())) return true;
         else return false;
     }
+<<<<<<< HEAD
     public void updateMatch(Match match){
+=======
+
+    public void updateMatch(Match match)
+    {
+>>>>>>> NetworkAndTime
         this.setScoreFirst(match.getScoreFirst());
         this.setScoreLast(match.getScoreLast());
         this.setMinute(match.getMinute());

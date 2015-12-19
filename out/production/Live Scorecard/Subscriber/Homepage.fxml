@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Subscriber.FirstController">
+   <children>
+      <ImageView fitHeight="461.0" fitWidth="633.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../football3.jpg" />
+         </image>
+      </ImageView>
+      <ListView fx:id="ScoreCard" layoutX="76.0" layoutY="132.0" prefHeight="200.0" prefWidth="425.0" />
+      <Button fx:id="exploreButton" layoutX="248.0" layoutY="361.0" mnemonicParsing="false" onAction="#exploreAction" text="Explore" />
+      <Button fx:id="backButton" layoutX="41.0" layoutY="405.0" mnemonicParsing="false" onAction="#backAction" text="Back" />
+      <Label layoutX="187.0" layoutY="14.0" prefHeight="46.0" prefWidth="234.0" text="LIVE SCORECARD" textFill="#e15353">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

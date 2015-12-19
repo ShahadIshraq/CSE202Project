@@ -10,6 +10,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.time.LocalDateTime;
 import java.util.Hashtable;
 
 public class Main extends Application {
@@ -18,21 +22,27 @@ public class Main extends Application {
     Hashtable<Contributor, Match> cTable=new Hashtable<>();
     Hashtable<Match, Contributor> mTable=new Hashtable<>();
     ObservableList<Match> matches= FXCollections.observableArrayList();
-    ObservableList<Contributor> contributors=FXCollections.observableArrayList();
+
+    ObservableList<NetworkUtil> clientList=FXCollections.observableArrayList();
 
     public static void main(String[] args) {
         launch(args);
     }
 
     @Override
-    public void start(Stage primaryStage){
+    public void start(Stage primaryStage) throws IOException {
        stage = primaryStage;
+
         try {
             showHomePage();
         } catch (Exception e) {
             System.out.println("here");
             e.printStackTrace();
         }
+
+
+        ServThread t=new ServThread(this);
+
 
 
 

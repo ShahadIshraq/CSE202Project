@@ -8,11 +8,11 @@
 
 <AnchorPane fx:id="pain" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="301.0" style="-fx-background-image: url('football1.jpg');" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Contributor.loginController">
    <children>
-      <Label layoutX="21.0" layoutY="28.0" text="User Name :" textFill="WHITE">
+      <Label layoutX="21.0" layoutY="28.0" text="User Name :" textFill="#101110">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
-      <Label layoutX="21.0" layoutY="78.0" text="Password :" textFill="#fcfcfc">
+      <Label layoutX="21.0" layoutY="78.0" text="Password :" textFill="#101110">
          <font>
             <Font name="System Bold" size="14.0" />
          </font></Label>
