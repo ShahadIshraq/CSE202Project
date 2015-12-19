@@ -47,15 +47,19 @@ public class MatchPageController {
     private Button logout;
     @FXML
     private Button start;
+    Match match;
 
-
-   /*
-   @FXML
-   private void updateTime(long now)
-    {
-            timer.setText(String.valueOf(now));
+    public void setMatch(Match match) {
+        this.match = match;
     }
-*/
+
+    /*
+       @FXML
+       private void updateTime(long now)
+        {
+                timer.setText(String.valueOf(now));
+        }
+    */
     @FXML
     void startAction(ActionEvent event) {
         if(gameState==0)
@@ -81,17 +85,12 @@ public class MatchPageController {
 
     @FXML
     void addGoalTeam1(ActionEvent event) {
-        System.out.println("G1");
-        g1++;
-        score1.setText(String.valueOf(g1));
-
+        match.setScoreLast(match.getScoreFirst()+1);
     }
 
     @FXML
     void addGoalTeam2(ActionEvent event) {
-        System.out.println("G2");
-        g2++;
-        score2.setText(String.valueOf(g2));
+        match.setScoreLast(match.getScoreLast()+1);
     }
 
     @FXML
@@ -106,13 +105,11 @@ public class MatchPageController {
 
     void init()
     {
-        gameState=0;
-        g1=3;
-        g2=0;
-        team1.setText("Man Utd");
-        team2.setText("Chelsea");
-        score1.setText(String.valueOf(g1));
-        score2.setText(String.valueOf(g2));
+        timer.setText(match.getSimpleMinute());
+        team1.setText(match.getSimpleFirstTeam());
+        team2.setText(match.getSimpleLastTeam());
+        score1.setText(match.getSimpleScoreFirst());
+        score2.setText(match.getSimpleScoreLast());
     }
 
     /*class MyTimer extends AnimationTimer

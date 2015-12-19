@@ -71,6 +71,7 @@ public class HomeController {
         main.matches.add(match);
         main.cTable.put(contributor, match);
         main.mTable.put(match,contributor);
+        main.contributors.add(contributor);
         addTeam1.setText(null);
         addTeam2.setText(null);
         contributorName.setText(null);
@@ -149,8 +150,8 @@ public class HomeController {
                                         Contributor contributor=main.mTable.get(match);
                                         main.matches.remove(match);
                                         main.cTable.remove(contributor);
-                                        main.mTable.remove(match);
-
+                                        main.contributors.remove(contributor);
+                                                main.mTable.remove(match);
                                             }
                                     );
                                     setGraphic(btn);

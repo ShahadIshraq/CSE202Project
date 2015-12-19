@@ -18,6 +18,7 @@ public class Main extends Application {
     Hashtable<Contributor, Match> cTable=new Hashtable<>();
     Hashtable<Match, Contributor> mTable=new Hashtable<>();
     ObservableList<Match> matches= FXCollections.observableArrayList();
+    ObservableList<Contributor> contributors=FXCollections.observableArrayList();
 
     public static void main(String[] args) {
         launch(args);

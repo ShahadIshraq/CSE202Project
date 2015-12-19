@@ -30,7 +30,8 @@ public class loginController {
             System.out.println("Name: "+userName.getText()+"  Password: "+password.getText());
             main.reporter.setName(userName.getText());
             main.reporter.setPassword(password.getText());
-            main.showUpdatePage();
+            //main.showUpdatePage();
+            main.Login();
         }
         if(e.getSource()==cancelButton)
         {

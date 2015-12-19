@@ -41,7 +41,7 @@ public class Main extends Application {
     }
     void Login()
     {
-        /*String serverAddress="127.0.0.1";
+        String serverAddress="127.0.0.1";
         int serverPort=33333;
         nc = new NetworkUtil(serverAddress,serverPort);
         nc.write(reporter);
@@ -51,20 +51,31 @@ public class Main extends Application {
             if(o instanceof String)
             {
                 String msg=(String) o;
-                if(msg.equals("OKA")) showUpdatePage();
+                if(msg.equals("Alert")) System.out.println("Error");
+                if(msg.equals("OK")) {
+                    Object o1=nc.read();
+                    Match match=(Match)o1;
+                    try {
+                        showUpdatePage(match);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        }*/
-       // showUpdatePage();
+        }
+
+
     }
 
-    void showUpdatePage() throws Exception {
+    void showUpdatePage(Match  match) throws Exception {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("matchPageContributor.fxml"));
         Parent root=loader.load();
         MatchPageController controller = loader.getController();
         controller.init();
         controller.setMain(this);
-        //controller.setLeagueList(leagueList);
+        controller.setMatch(match);
+
         stage.setTitle("Update");
         stage.setScene(new Scene(root, 600, 345));
         stage.show();
