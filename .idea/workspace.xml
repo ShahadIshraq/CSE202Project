@@ -1,42 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Football.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/NetworkUtil.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/ServThread.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Subscriber/FirstController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Subscriber/Main.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Subscriber/Match.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Subscriber/MatchController.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/football3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/football4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Subscriber/Homepage.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Subscriber/match.fxml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/ClientThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/ContributorThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/ServThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/Match.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/Match.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/MatchPageController.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/MatchPageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1$1.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2$1.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Main.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Match.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Match.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/MatchController.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/MatchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/loginPage.fxml" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/loginPage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/matchScore.fxml" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/matchScore.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/Match.java" afterPath="$PROJECT_DIR$/src/Contributor/Match.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/MatchPageController.java" afterPath="$PROJECT_DIR$/src/Contributor/MatchPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/loginPage.fxml" afterPath="$PROJECT_DIR$/src/Contributor/loginPage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/Main.java" afterPath="$PROJECT_DIR$/src/Server/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/Match.java" afterPath="$PROJECT_DIR$/src/Server/Match.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Subscriber/Match.java" afterPath="$PROJECT_DIR$/src/Subscriber/Match.java" />
-    </list>
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
