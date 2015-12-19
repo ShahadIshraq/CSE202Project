@@ -75,7 +75,6 @@ public class Main extends Application {
         controller.init();
         controller.setMain(this);
         controller.setMatch(match);
-
         stage.setTitle("Update");
         stage.setScene(new Scene(root, 600, 345));
         stage.show();

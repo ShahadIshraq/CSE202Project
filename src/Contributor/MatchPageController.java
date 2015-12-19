@@ -86,21 +86,26 @@ public class MatchPageController {
     @FXML
     void addGoalTeam1(ActionEvent event) {
         match.setScoreLast(match.getScoreFirst()+1);
+        main.nc.write("g1"+','+match.toString()+','+match.getSimpleMinute());
     }
 
     @FXML
     void addGoalTeam2(ActionEvent event) {
-        match.setScoreLast(match.getScoreLast()+1);
+        match.setScoreLast(match.getScoreLast() + 1);
+        main.nc.write("g2" + ',' + match.toString() + ',' + match.getSimpleMinute());
     }
 
     @FXML
     void updateTimeAction(ActionEvent event) {
         System.out.println("now");
+        main.nc.write("ut" + ',' + match.toString() + ',' + match.getSimpleMinute());
     }
 
     @FXML
     void logoutAction(ActionEvent event) throws Exception {
         main.showFirstPage();
+        main.nc.write("out"+','+match.toString()+','+match.getSimpleMinute());
+        main.nc.closeConnection();
     }
 
     void init()
