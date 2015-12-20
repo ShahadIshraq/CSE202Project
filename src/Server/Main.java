@@ -32,6 +32,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
        stage = primaryStage;
 
+        ServThread t=new ServThread(this);
         try {
             showHomePage();
         } catch (Exception e) {
@@ -40,7 +41,7 @@ public class Main extends Application {
         }
 
 
-        ServThread t=new ServThread(this);
+
 
 
 

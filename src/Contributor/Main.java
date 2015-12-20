@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  */
 public class Main extends Application {
     Stage stage;
-    Contributor reporter=new Contributor();
+    Contributor reporter;
     NetworkUtil nc;
 
 
@@ -23,6 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         stage=primaryStage;
+        reporter=new Contributor();
         showFirstPage();
 
     }
@@ -57,12 +58,12 @@ public class Main extends Application {
        // showUpdatePage();
     }
 
-    void showUpdatePage() throws Exception {
+    void showUpdatePage(String f,String l) throws Exception {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("matchPageContributor.fxml"));
         Parent root=loader.load();
         MatchPageController controller = loader.getController();
-        controller.init();
+        controller.init(f,l);
         controller.setMain(this);
         //controller.setLeagueList(leagueList);
         stage.setTitle("Update");

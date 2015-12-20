@@ -124,13 +124,13 @@ public class MatchPageController {
         main.showFirstPage();
     }
 
-    void init()
+    void init(String f,String l)
     {
         gameState=0;
-        g1=3;
+        g1=0;
         g2=0;
-        team1.setText("Man Utd");
-        team2.setText("Chelsea");
+        team1.setText(f);
+        team2.setText(l);
         score1.setText(String.valueOf(g1));
         score2.setText(String.valueOf(g2));
     }

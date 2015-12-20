@@ -18,11 +18,12 @@ public class ContributorThread implements Runnable {
         this.nc=nc;
         this.c=c;
         mtch=main.cTable.get(c);
-        t=new Thread();
+        t=new Thread(this);
         t.start();
     }
     @Override
     public void run() {
+        System.out.println("Thread for recieving update has been started");
         while (true) {
             String m = (String) nc.read();
             StringTokenizer st = new StringTokenizer(m, ",");

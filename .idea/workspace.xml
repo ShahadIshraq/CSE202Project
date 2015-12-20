@@ -2,28 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/ClientThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/ContributorThread.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/NetworkUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Server/ServThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/Match.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/Match.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/MatchPageController.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/MatchPageController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1$1.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2$1.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/HomeController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Main.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Match.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/Match.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/MatchController.class" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/MatchController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/loginPage.fxml" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Contributor/loginPage.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Live Scorecard/Server/matchScore.fxml" afterPath="$PROJECT_DIR$/out/production/Live Scorecard/Server/matchScore.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/Contributor.java" afterPath="$PROJECT_DIR$/src/Contributor/Contributor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/Main.java" afterPath="$PROJECT_DIR$/src/Contributor/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/Match.java" afterPath="$PROJECT_DIR$/src/Contributor/Match.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/MatchPageController.java" afterPath="$PROJECT_DIR$/src/Contributor/MatchPageController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/loginPage.fxml" afterPath="$PROJECT_DIR$/src/Contributor/loginPage.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Contributor/loginController.java" afterPath="$PROJECT_DIR$/src/Contributor/loginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/ClientThread.java" afterPath="$PROJECT_DIR$/src/Server/ClientThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/Contributor.java" afterPath="$PROJECT_DIR$/src/Server/Contributor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/ContributorThread.java" afterPath="$PROJECT_DIR$/src/Server/ContributorThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/Main.java" afterPath="$PROJECT_DIR$/src/Server/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/Match.java" afterPath="$PROJECT_DIR$/src/Server/Match.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Server/ServThread.java" afterPath="$PROJECT_DIR$/src/Server/ServThread.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Subscriber/Match.java" afterPath="$PROJECT_DIR$/src/Subscriber/Match.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -84,11 +73,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.69863015">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="loginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Contributor/loginController.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <caret line="60" column="36" selection-start-line="56" selection-start-column="16" selection-end-line="60" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -98,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/src/Server/ServThread.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+              <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,31 +105,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Server/ClientThread.java">
+      <file leaf-file-name="Contributor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Server/Contributor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContributorThread.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Server/ContributorThread.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Contributor/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Match.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Subscriber/Match.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="134" column="5" selection-start-line="130" selection-start-column="4" selection-end-line="134" selection-end-column="5" />
+              <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -173,15 +162,19 @@
         <option value="$PROJECT_DIR$/src/Server/FirstMain.java" />
         <option value="$PROJECT_DIR$/src/Server/match.fxml" />
         <option value="$PROJECT_DIR$/src/Server/MatchController.java" />
-        <option value="$PROJECT_DIR$/src/Contributor/MatchPageController.java" />
         <option value="$PROJECT_DIR$/src/Server/NetworkUtil.java" />
-        <option value="$PROJECT_DIR$/src/Server/ClientThread.java" />
+        <option value="$PROJECT_DIR$/src/Contributor/MatchPageController.java" />
+        <option value="$PROJECT_DIR$/src/Contributor/Main.java" />
         <option value="$PROJECT_DIR$/src/Server/Main.java" />
-        <option value="$PROJECT_DIR$/src/Contributor/Match.java" />
-        <option value="$PROJECT_DIR$/src/Subscriber/Match.java" />
-        <option value="$PROJECT_DIR$/src/Server/Match.java" />
-        <option value="$PROJECT_DIR$/src/Server/ServThread.java" />
         <option value="$PROJECT_DIR$/src/Server/ContributorThread.java" />
+        <option value="$PROJECT_DIR$/src/Server/ClientThread.java" />
+        <option value="$PROJECT_DIR$/src/Contributor/Match.java" />
+        <option value="$PROJECT_DIR$/src/Server/Match.java" />
+        <option value="$PROJECT_DIR$/src/Server/Contributor.java" />
+        <option value="$PROJECT_DIR$/src/Subscriber/Match.java" />
+        <option value="$PROJECT_DIR$/src/Contributor/Contributor.java" />
+        <option value="$PROJECT_DIR$/src/Contributor/loginController.java" />
+        <option value="$PROJECT_DIR$/src/Server/ServThread.java" />
       </list>
     </option>
   </component>
@@ -222,6 +215,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -312,7 +306,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -339,7 +332,7 @@
       <recent name="C:\Users\ABIR BINDU\Desktop\Live Scorecard\src\Server" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration default="false" name="FirstMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -696,9 +689,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main (3)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main (3)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main (2)" />
         <item index="3" class="java.lang.String" itemvalue="Application.FirstMain" />
       </list>
     </recent_temporary>
@@ -730,12 +723,12 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3267974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24810892" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
@@ -778,18 +771,52 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/ServThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/ClientThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/ContributorThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subscriber/Match.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="5" selection-start-line="130" selection-start-column="4" selection-end-line="134" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/MatchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#927#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#667#668#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -797,11 +824,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#817#818#0" expanded="false" />
-            <element signature="e#845#846#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -817,13 +840,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1099#1100#0" expanded="false" />
-            <element signature="e#1131#1132#0" expanded="false" />
-            <element signature="e#1190#1191#0" expanded="false" />
-            <element signature="e#1233#1234#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -831,14 +848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#927#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#667#668#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -854,14 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#927#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#594#595#0" expanded="false" />
-            <element signature="e#626#627#0" expanded="false" />
-            <element signature="e#667#668#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -966,38 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contributor/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8177083">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contributor/loginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Contributor/MatchPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044270832">
-          <caret line="86" column="22" selection-start-line="86" selection-start-column="22" selection-end-line="86" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Contributor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22135417">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/NetworkUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17708333">
@@ -1006,58 +975,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1953125">
-          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/MatchController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044270832">
           <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contributor/NetworkUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17708333">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contributor/MatchPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="129" column="12" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/ClientThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43664384">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/ContributorThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.494863">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contributor/Contributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05821918">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Contributor/Match.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="5" selection-start-line="130" selection-start-column="5" selection-end-line="130" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Subscriber/Match.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="5" selection-start-line="130" selection-start-column="4" selection-end-line="134" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.20376712">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/Match.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20376712">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Subscriber/Match.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20376712">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Contributor/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="22" selection-start-line="127" selection-start-column="22" selection-end-line="127" selection-end-column="22" />
+          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Contributor/loginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <caret line="60" column="36" selection-start-line="56" selection-start-column="16" selection-end-line="60" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Server/Contributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1065,17 +1087,17 @@
     <entry file="file://$PROJECT_DIR$/src/Server/ServThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+          <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Server/ContributorThread.java">
+    <entry file="file://$PROJECT_DIR$/src/Server/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.69863015">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
           <folding />
         </state>
       </provider>
