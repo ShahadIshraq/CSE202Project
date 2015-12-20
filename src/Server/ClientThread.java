@@ -13,7 +13,7 @@ public class ClientThread implements Runnable {
     {
         this.nc=nc;
         this.main=main;
-        t=new Thread();
+        t=new Thread(this);
         t.start();
     }
 

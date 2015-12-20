@@ -2,10 +2,12 @@ package Server;
 
 import javafx.beans.property.SimpleStringProperty;
 
+import java.io.Serializable;
+
 /**
  * Created by ABIR BINDU on 12/7/2015.
  */
-public class Match {
+public class Match implements Serializable {
     String firstTeam;
     String lastTeam;
     int scoreFirst;

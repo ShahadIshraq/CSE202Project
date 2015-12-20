@@ -3,6 +3,7 @@ package Server;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.StringTokenizer;
 
 /**
  * Created by user on 19-Dec-15.
@@ -15,13 +16,14 @@ public class ServThread implements Runnable{
     private ServerSocket ss;
     ServThread(Main main) throws IOException {
         this.main=main;
-        t=new Thread();
         ss=new ServerSocket(33333);
+        t=new Thread(this);
         t.start();
     }
     @Override
     public void run() {
 
+        System.out.println("got into ServThread");
         while(true){
             try {
                 nc=new NetworkUtil(ss.accept());
@@ -31,11 +33,20 @@ public class ServThread implements Runnable{
             String msg= (String) nc.read();
             if(msg.equals("contributor"))
             {
-                Contributor c=(Contributor) nc.read();
+                System.out.println("A contributor is trying to log in");
+                String up=(String) nc.read();
+                StringTokenizer st=new StringTokenizer(up," ");
+                String n=st.nextToken();
+                String p=st.nextToken();
+                Contributor c=new Contributor(p,n);
+                System.out.println("got acc name: "+n+ " and pass: "+p);
                 if(main.mTable.containsValue(c))
                 {
+                    System.out.println("Matched");
                     nc.write("oka");
-                    nc.write(main.cTable.get(c));
+                    nc.write(main.cTable.get(c).toString());
+                    System.out.println("Match details sent");
+                    ContributorThread ct=new ContributorThread(this.main,nc,c);
                 }
                 else nc.write("Alert");
 

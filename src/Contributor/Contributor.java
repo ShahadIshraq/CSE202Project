@@ -1,9 +1,11 @@
 package Contributor;
 
+import java.io.Serializable;
+
 /**
  * Created by ABIR BINDU on 12/14/2015.
  */
-public class Contributor {
+public class Contributor implements Serializable{
     private String name;
     private String password;
 
