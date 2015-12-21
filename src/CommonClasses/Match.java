@@ -1,4 +1,4 @@
-package Subscriber;
+package CommonClasses;
 
 import javafx.beans.property.SimpleStringProperty;
 
@@ -19,7 +19,7 @@ public class Match implements Serializable {
     SimpleStringProperty simpleScoreLast;
     SimpleStringProperty simpleMinute;
 
-    Match(String firstTeam, String lastTeam){
+    public Match(String firstTeam, String lastTeam){
         this.firstTeam=firstTeam;
         this.lastTeam=lastTeam;
         this.scoreFirst=0;
@@ -42,9 +42,7 @@ public class Match implements Serializable {
     public int getScoreFirst(){
         return this.scoreFirst;
     }
-    public int getScoreLast(){
-        return this.scoreLast;
-    }
+    public int getScoreLast(){return this.scoreLast;}
     public void setFirstTeam(String firstTeam){
         this.firstTeam=firstTeam;
     }
@@ -130,13 +128,13 @@ public class Match implements Serializable {
         return string;
     }
 
-    public boolean isEqualTo(Match m)
+    public boolean isEqualTo(Contributor.Match m)
     {
         if(m.firstTeam.equals(this.firstTeam) && m.lastTeam.equals(this.getLastTeam())) return true;
         else return false;
     }
 
-    public void updateMatch(Match match)
+    public void updateMatch(Contributor.Match match)
     {
         this.setScoreFirst(match.getScoreFirst());
         this.setScoreLast(match.getScoreLast());

@@ -1,4 +1,5 @@
 package Server;
+import CommonClasses.*;
 
 /**
  * Created by user on 20-Dec-15.
@@ -19,6 +20,7 @@ public class ClientThread implements Runnable {
 
     @Override
     public void run() {
+
         String msg=(String) nc.read();
         if(msg.equals("oka bye"))
         {

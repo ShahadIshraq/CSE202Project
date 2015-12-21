@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 import java.util.StringTokenizer;
 
 import static java.lang.System.exit;
+import CommonClasses.*;
 
 /**
  * Created by user on 14-Dec-15.
@@ -52,7 +53,7 @@ public class loginController {
             if (m.equals("oka")) {
                 System.out.println("Got access");
                 String mt = (String) main.nc.read();
-                System.out.println("Match detail: "+mt);
+                System.out.println("atch detail: "+mt);
                 StringTokenizer st = new StringTokenizer(mt, ",");
                 Match match = new Match(st.nextToken(), st.nextToken());
                 try {

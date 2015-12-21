@@ -10,13 +10,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import CommonClasses.*;
 import java.util.Hashtable;
 import java.util.Observable;
 
 public class Main extends Application {
     Stage stage;
-    ObservableList<Server.Match> matches= FXCollections.observableArrayList();
+    ObservableList<Match> matches= FXCollections.observableArrayList();
     ObservableList<String> sMatches=FXCollections.observableArrayList();
     Hashtable<String, Match> mTable=new Hashtable<>();
 

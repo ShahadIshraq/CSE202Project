@@ -1,6 +1,8 @@
 package Server;
 
+import java.util.ArrayList;
 import java.util.StringTokenizer;
+import CommonClasses.*;
 
 /**
  * Created by user on 19-Dec-15.
@@ -44,8 +46,12 @@ public class ContributorThread implements Runnable {
                 System.out.println(mtch.getMinute());
             }
             else if (m.equals("out")) break;
+            ArrayList<Match> ma =new ArrayList<Match>();
+            for(Match mm:main.matches) {
+                ma.add(mm);
+            }
             if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList){
-                nc.write(main.matches);
+                nc.write(ma);
                 System.out.println("Update sent to all clients");
             }
         }

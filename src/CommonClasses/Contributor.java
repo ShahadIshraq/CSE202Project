@@ -1,14 +1,19 @@
-package Server;
+package CommonClasses;
 
 import java.io.Serializable;
 
 /**
  * Created by ABIR BINDU on 12/14/2015.
  */
-public class Contributor implements Serializable {
+public class Contributor implements Serializable{
     private String name;
     private String password;
 
+    public Contributor()
+    {
+        password="";
+        name="";
+    }
     public Contributor(String password, String name) {
         this.password = password;
         this.name = name;

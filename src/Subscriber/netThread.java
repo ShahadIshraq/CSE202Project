@@ -2,9 +2,11 @@ package Subscriber;
 
 import Contributor.*;
 import Server.*;
-import Server.Match;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
+import java.util.ArrayList;
+import CommonClasses.*;
 
 /**
  * Created by user on 21-Dec-15.
@@ -32,8 +34,14 @@ public class netThread implements Runnable{
         nc.write("client");
         while(true)
         {
-            ObservableList<Match> matches= (ObservableList<Match>) nc.read();
-            main.matches=matches;
+            System.out.println("Got here");
+            ArrayList<Match> ma= (ArrayList<Match>) nc.read();
+            ObservableList<Match> mam=FXCollections.observableArrayList();
+            for(Match m: ma) mam.add(m);
+            main.matches=mam;
+            for(Match m: ma) mam.add(m);
+
+            System.out.println(main.matches);
         }
     }
 }

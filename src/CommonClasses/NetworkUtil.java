@@ -1,4 +1,4 @@
-package Subscriber;
+package CommonClasses;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
