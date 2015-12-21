@@ -19,8 +19,8 @@ import java.util.Hashtable;
 public class Main extends Application {
     Stage stage;
 
-    Hashtable<Contributor, Match> cTable=new Hashtable<>();
-    Hashtable<Match, Contributor> mTable=new Hashtable<>();
+    Hashtable<String, Match> cTable=new Hashtable<>();
+    Hashtable<Match, String> mTable=new Hashtable<>();
     ObservableList<Match> matches= FXCollections.observableArrayList();
 
     ObservableList<NetworkUtil> clientList=FXCollections.observableArrayList();

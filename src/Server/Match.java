@@ -42,9 +42,7 @@ public class Match implements Serializable {
     public int getScoreFirst(){
         return this.scoreFirst;
     }
-    public int getScoreLast(){
-        return this.getScoreLast();
-    }
+    public int getScoreLast(){return this.scoreLast;}
     public void setFirstTeam(String firstTeam){
         this.firstTeam=firstTeam;
     }
@@ -126,7 +124,7 @@ public class Match implements Serializable {
 
     @Override
     public String toString() {
-        String string=firstTeam+"vs"+lastTeam;
+        String string=firstTeam+","+lastTeam;
         return string;
     }
 

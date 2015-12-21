@@ -115,25 +115,19 @@ public class Match implements Serializable {
 
     @Override
     public String toString() {
-        String string=firstTeam+"vs"+lastTeam;
+        String string=firstTeam+","+lastTeam;
         return string;
     }
-<<<<<<< HEAD
-=======
 
->>>>>>> NetworkAndTime
     public boolean isEqualTo(Match m)
     {
         if(m.firstTeam.equals(this.firstTeam) && m.lastTeam.equals(this.getLastTeam())) return true;
         else return false;
     }
-<<<<<<< HEAD
-    public void updateMatch(Match match){
-=======
 
     public void updateMatch(Match match)
     {
->>>>>>> NetworkAndTime
+
         this.setScoreFirst(match.getScoreFirst());
         this.setScoreLast(match.getScoreLast());
         this.setMinute(match.getMinute());

@@ -66,12 +66,12 @@ public class HomeController {
     @FXML
     void addMatchAction(ActionEvent event) {
 
-        Contributor contributor=new Contributor(contributorName.getText(),contributorPassword.getText());
+        String contributor=contributorName.getText()+" "+contributorPassword.getText();
         Match match=new Match(addTeam1.getText(), addTeam2.getText());
         main.matches.add(match);
         main.cTable.put(contributor, match);
         main.mTable.put(match,contributor);
-        main.contributors.add(contributor);
+        //main.contributors.add(contributor);
         addTeam1.setText(null);
         addTeam2.setText(null);
         contributorName.setText(null);
@@ -147,12 +147,12 @@ public class HomeController {
                                     btn.setOnAction((ActionEvent event) -> {
                                         System.out.println("hello");
                                         Match match= getTableView().getItems().get(getIndex());
-                                        Contributor contributor=main.mTable.get(match);
+                                        String contributor=main.mTable.get(match);
                                         main.matches.remove(match);
                                         main.cTable.remove(contributor);
-                                        main.contributors.remove(contributor);
-                                                main.mTable.remove(match);
-                                            }
+                                        //main.contributors.remove(contributor);
+                                        // main.mTable.remove(match);
+                                    }
                                     );
                                     setGraphic(btn);
                                     setText(null);

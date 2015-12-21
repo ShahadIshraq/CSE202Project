@@ -38,15 +38,15 @@ public class ServThread implements Runnable{
                 StringTokenizer st=new StringTokenizer(up," ");
                 String n=st.nextToken();
                 String p=st.nextToken();
-                Contributor c=new Contributor(p,n);
+
                 System.out.println("got acc name: "+n+ " and pass: "+p);
-                if(main.mTable.containsValue(c))
+                if(main.mTable.containsValue(up))
                 {
                     System.out.println("Matched");
                     nc.write("oka");
-                    nc.write(main.cTable.get(c).toString());
+                    nc.write(main.cTable.get(up).toString());
                     System.out.println("Match details sent");
-                    ContributorThread ct=new ContributorThread(this.main,nc,c);
+                    ContributorThread ct=new ContributorThread(this.main,nc,main.cTable.get(up));
                 }
                 else nc.write("Alert");
 

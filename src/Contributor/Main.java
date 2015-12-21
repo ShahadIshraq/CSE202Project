@@ -12,7 +12,7 @@ import javafx.stage.Stage;
  */
 public class Main extends Application {
     Stage stage;
-    Contributor reporter=new Contributor();
+    String reporter;
     NetworkUtil nc;
 
 
@@ -39,44 +39,19 @@ public class Main extends Application {
         stage.setScene(new Scene(root, 300, 173));
         stage.show();
     }
-    void Login()
-    {
-        String serverAddress="127.0.0.1";
-        int serverPort=33333;
-        nc = new NetworkUtil(serverAddress,serverPort);
-        nc.write(reporter);
-        Object o=nc.read();
-        if(o!=null)
-        {
-            if(o instanceof String)
-            {
-                String msg=(String) o;
-                if(msg.equals("Alert")) System.out.println("Error");
-                if(msg.equals("OK")) {
-                    Object o1=nc.read();
-                    Match match=(Match)o1;
-                    try {
-                        showUpdatePage(match);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }
 
-
-    }
 
     void showUpdatePage(Match  match) throws Exception {
         FXMLLoader loader=new FXMLLoader();
         loader.setLocation(getClass().getResource("matchPageContributor.fxml"));
         Parent root=loader.load();
         MatchPageController controller = loader.getController();
-        controller.init();
         controller.setMain(this);
         controller.setMatch(match);
+        controller.init();
         stage.setTitle("Update");
         stage.setScene(new Scene(root, 600, 345));
+        System.out.println("Got up to staging the update page.Will show it now...");
         stage.show();
     }
 }
