@@ -1,6 +1,8 @@
 package Server;
 import CommonClasses.*;
 
+import java.util.ArrayList;
+
 /**
  * Created by user on 20-Dec-15.
  */
@@ -20,6 +22,14 @@ public class ClientThread implements Runnable {
 
     @Override
     public void run() {
+
+        if(!main.matches.isEmpty()){
+            for(Match m:main.matches)
+            {
+                nc.write("add,"+m.toString()+","+m.getScoreFirst()+","+m.getScoreLast()+","+m.getMinute());
+            }
+
+        }
 
         String msg=(String) nc.read();
         if(msg.equals("oka bye"))

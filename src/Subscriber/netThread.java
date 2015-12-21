@@ -6,6 +6,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
+import java.util.IntSummaryStatistics;
+import java.util.StringTokenizer;
+
 import CommonClasses.*;
 
 /**
@@ -32,16 +35,33 @@ public class netThread implements Runnable{
         nc = new NetworkUtil(serverAddress, serverPort);
         System.out.println("Connected");
         nc.write("client");
+
         while(true)
         {
             System.out.println("Got here");
-            ArrayList<Match> ma= (ArrayList<Match>) nc.read();
-            ObservableList<Match> mam=FXCollections.observableArrayList();
-            for(Match m: ma) mam.add(m);
-            main.matches=mam;
-            for(Match m: ma) mam.add(m);
-
-            System.out.println(main.matches);
+            String m=(String)nc.read();
+            StringTokenizer st=new StringTokenizer(m,",");
+            if(st.nextToken().equals("add"))
+            {
+                System.out.println("In add");
+                Match match=new Match(st.nextToken(),st.nextToken());
+                match.setScoreFirst(Integer.parseInt(st.nextToken()));
+                match.setScoreLast(Integer.parseInt(st.nextToken()));
+                match.setMinute(Integer.parseInt(st.nextToken()));
+                main.matches.add(match);
+                main.sMatches.add(match.toString());
+                main.mTable.put(match.toString(),match);
+            }
+            else
+            {
+                st.nextToken();
+                System.out.println("In update");
+                String ms=st.nextToken()+","+st.nextToken();
+                main.mTable.get(ms);
+                main.mTable.get(ms).setScoreFirst(Integer.parseInt(st.nextToken()));
+                main.mTable.get(ms).setScoreLast(Integer.parseInt(st.nextToken()));
+                main.mTable.get(ms).setMinute(Integer.parseInt(st.nextToken()));
+            }
         }
     }
 }

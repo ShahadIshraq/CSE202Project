@@ -33,27 +33,23 @@ public class ContributorThread implements Runnable {
                 int time=(Integer) nc.read();
                 mtch.setMinute(time/60);
                 System.out.println(mtch.getMinute());
+                if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList) nc.write("update,"+mtch.toString()+","+mtch.getScoreFirst()+","+mtch.getScoreLast()+","+mtch.getMinute());
 
             } else if (m.equals("g2")) {
                 mtch.setScoreLast(mtch.getScoreLast() + 1);
                 int time = (Integer) nc.read();
                 mtch.setMinute(time/60);
                 System.out.println(mtch.getMinute());
+                if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList) nc.write("update,"+mtch.toString()+","+mtch.getScoreFirst()+","+mtch.getScoreLast()+","+mtch.getMinute());
             } else if (m.equals("ut")){
                 int time=(Integer)nc.read();
                 System.out.println(time);
                 mtch.setMinute(time/60);
                 System.out.println(mtch.getMinute());
+                if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList) nc.write("update,"+mtch.toString()+","+mtch.getScoreFirst()+","+mtch.getScoreLast()+","+mtch.getMinute());
             }
             else if (m.equals("out")) break;
-            ArrayList<Match> ma =new ArrayList<Match>();
-            for(Match mm:main.matches) {
-                ma.add(mm);
-            }
-            if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList){
-                nc.write(ma);
-                System.out.println("Update sent to all clients");
-            }
+
         }
     }
 }

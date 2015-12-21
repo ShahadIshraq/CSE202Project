@@ -128,13 +128,13 @@ public class Match implements Serializable {
         return string;
     }
 
-    public boolean isEqualTo(Contributor.Match m)
+    public boolean isEqualTo(Match m)
     {
         if(m.firstTeam.equals(this.firstTeam) && m.lastTeam.equals(this.getLastTeam())) return true;
         else return false;
     }
 
-    public void updateMatch(Contributor.Match match)
+    public void updateMatch(Match match)
     {
         this.setScoreFirst(match.getScoreFirst());
         this.setScoreLast(match.getScoreLast());

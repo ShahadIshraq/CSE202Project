@@ -23,14 +23,14 @@ public class loginController {
     @FXML
     public Button loginButton;
     @FXML
-    public Button cancelButton;
+    public Button clearButton;
 
     @FXML
     public void buttonAction(ActionEvent e) throws Exception {
         if (e.getSource() == loginButton) {
 
-            String uName=userName.getText()==null?"_":userName.getText();
-            String pass=password.getText()==null?"_":password.getText();
+            String uName = userName.getText() == null ? "_" : userName.getText();
+            String pass = password.getText() == null ? "_" : password.getText();
             System.out.println("Name: " + uName + "  Password: " + pass);
             main.reporter = userName.getText() + " " + password.getText();
             String serverAddress = "127.0.0.1";
@@ -53,7 +53,7 @@ public class loginController {
             if (m.equals("oka")) {
                 System.out.println("Got access");
                 String mt = (String) main.nc.read();
-                System.out.println("atch detail: "+mt);
+                System.out.println("atch detail: " + mt);
                 StringTokenizer st = new StringTokenizer(mt, ",");
                 Match match = new Match(st.nextToken(), st.nextToken());
                 try {
@@ -63,12 +63,14 @@ public class loginController {
                 }
 
             }
-            if (e.getSource() == cancelButton) {
-                System.out.println("cancle");
-                exit(1);
-            }
+        }
+        if (e.getSource() == clearButton) {
+            System.out.println("cancle");
+            userName.setText(null);
+            password.setText(null);
         }
     }
+
 
     public void setMain(Main main){this.main=main;}
 }

@@ -11,6 +11,7 @@ package Server;
         import javafx.scene.control.*;
         import javafx.scene.control.cell.PropertyValueFactory;
         import javafx.util.Callback;
+        import CommonClasses.*;
 
 public class HomeController {
 

@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import CommonClasses.*;
 
 public class MatchController {
 
@@ -40,6 +41,9 @@ public class MatchController {
     private Button back;
 
     @FXML
+    private Button refresh;
+
+    @FXML
     void backAction(ActionEvent event) {
         try {
             main.showHomePage();
@@ -47,5 +51,15 @@ public class MatchController {
             e.printStackTrace();
         }
 
+    }
+
+    @FXML
+    void refreshaction(ActionEvent event)
+    {
+        try {
+            main.showMatchPage(main.mTable.get(match.toString()));
+        } catch (Exception e) {
+            System.out.println("Refreshing error");
+        }
     }
 }
