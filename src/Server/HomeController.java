@@ -151,7 +151,7 @@ public class HomeController {
                                         main.matches.remove(match);
                                         main.cTable.remove(contributor);
                                         //main.contributors.remove(contributor);
-                                        // main.mTable.remove(match);
+                                        main.mTable.remove(match);
                                     }
                                     );
                                     setGraphic(btn);

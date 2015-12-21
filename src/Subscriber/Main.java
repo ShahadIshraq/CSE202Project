@@ -16,7 +16,7 @@ import java.util.Observable;
 
 public class Main extends Application {
     Stage stage;
-    ObservableList<Match> matches= FXCollections.observableArrayList();
+    ObservableList<Server.Match> matches= FXCollections.observableArrayList();
     ObservableList<String> sMatches=FXCollections.observableArrayList();
     Hashtable<String, Match> mTable=new Hashtable<>();
 
@@ -26,6 +26,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        netThread nt=new netThread(this);
         stage=primaryStage;
         try {
             showHomePage();

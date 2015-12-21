@@ -30,16 +30,18 @@ public class ContributorThread implements Runnable {
                 mtch.setScoreFirst(mtch.getScoreFirst() + 1);
                 int time=(Integer) nc.read();
                 mtch.setMinute(time/60);
+                System.out.println(mtch.getMinute());
 
             } else if (m.equals("g2")) {
                 mtch.setScoreLast(mtch.getScoreLast() + 1);
                 int time = (Integer) nc.read();
                 mtch.setMinute(time/60);
-
+                System.out.println(mtch.getMinute());
             } else if (m.equals("ut")){
                 int time=(Integer)nc.read();
                 System.out.println(time);
                 mtch.setMinute(time/60);
+                System.out.println(mtch.getMinute());
             }
             else if (m.equals("out")) break;
             if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList){

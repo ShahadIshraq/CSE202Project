@@ -76,7 +76,7 @@ public class MatchPageController {
             gameState=2;
             timer.setText("45:00");
             main.nc.write("ut");
-            main.nc.write(45);
+            main.nc.write(45*60);
             start.setText("Second Half Start");
 
         }
@@ -91,7 +91,7 @@ public class MatchPageController {
         {
             timer.setText("90:00");
             main.nc.write("ut");
-            main.nc.write(90);
+            main.nc.write(90*60);
             gameState=4;
             start.setOpacity(0.0);
 
@@ -125,20 +125,26 @@ public class MatchPageController {
     @FXML
     void updateTimeAction(ActionEvent event) {
         currentPoint=LocalDateTime.now();
-        int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(startPoint.getHour()*60*60+startPoint.getMinute()*60+startPoint.getSecond());
+
         if(gameState==1){
+            int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(startPoint.getHour()*60*60+startPoint.getMinute()*60+startPoint.getSecond());
             timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
             match.setMinute(time);
+            System.out.println("now: "+time);
+            main.nc.write("ut");
+            main.nc.write(time);
         }
         else if(gameState==3)
         {
+            int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(secondStartPoint.getHour()*60*60+secondStartPoint.getMinute()*60+secondStartPoint.getSecond());
             timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
             match.setMinute(time);
+            System.out.println("now: "+time);
+            main.nc.write("ut");
+            main.nc.write(time);
         }
 
-        System.out.println("now: "+time);
-        main.nc.write("ut");
-        main.nc.write(time);
+
 
     }
 
