@@ -22,7 +22,7 @@ public class ContributorThread implements Runnable {
         t.start();
     }
     @Override
-    public void run() {
+    public void run()  {
         System.out.println("Thread for recieving update has been started");
         while (true) {
             String m = (String) nc.read();

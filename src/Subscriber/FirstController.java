@@ -9,7 +9,6 @@ package Subscriber;
         import javafx.fxml.FXML;
         import javafx.scene.control.Button;
         import javafx.scene.control.ListView;
-        import CommonClasses.*;
 
 public class FirstController {
 
@@ -39,7 +38,7 @@ public class FirstController {
     void exploreAction(ActionEvent event) {
 
         String matchName=ScoreCard.getSelectionModel().getSelectedItem();
-        Match match=main.mTable.get(matchName);
+        sMatch match=main.mTable.get(matchName);
         try {
             main.showMatchPage(match);
         } catch (Exception e) {

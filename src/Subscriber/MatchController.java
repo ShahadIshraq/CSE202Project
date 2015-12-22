@@ -26,7 +26,7 @@ public class MatchController {
     @FXML
     public Label team2;
 
-    Match match;
+    sMatch match;
 
     Main main;
 
@@ -34,7 +34,7 @@ public class MatchController {
         this.main = main;
     }
 
-    public void setMatch(Match match) {
+    public void setMatch(sMatch match) {
         this.match = match;
     }
     @FXML
@@ -54,12 +54,8 @@ public class MatchController {
     }
 
     @FXML
-    void refreshaction(ActionEvent event)
-    {
-        try {
-            main.showMatchPage(main.mTable.get(match.toString()));
-        } catch (Exception e) {
-            System.out.println("Refreshing error");
-        }
+    void refreshaction(ActionEvent event) throws Exception {
+        main.showMatchPage(match);
     }
 }
+

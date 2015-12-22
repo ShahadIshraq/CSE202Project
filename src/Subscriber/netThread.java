@@ -41,26 +41,33 @@ public class netThread implements Runnable{
             System.out.println("Got here");
             String m=(String)nc.read();
             StringTokenizer st=new StringTokenizer(m,",");
-            if(st.nextToken().equals("add"))
+            String msg,ft,lt,sf,sl,t;
+            msg=st.nextToken();
+            ft=st.nextToken();
+            lt=st.nextToken();
+            sf=st.nextToken();
+            sl=st.nextToken();
+            t=st.nextToken();
+            if(msg.equals("add"))
             {
                 System.out.println("In add");
-                Match match=new Match(st.nextToken(),st.nextToken());
-                match.setScoreFirst(Integer.parseInt(st.nextToken()));
-                match.setScoreLast(Integer.parseInt(st.nextToken()));
-                match.setMinute(Integer.parseInt(st.nextToken()));
+                sMatch match=new sMatch(ft,lt);
+                match.setScoreFirst(Integer.parseInt(sf));
+                match.setScoreLast(Integer.parseInt(sl));
+                match.setMinute(Integer.parseInt(t));
                 main.matches.add(match);
                 main.sMatches.add(match.toString());
                 main.mTable.put(match.toString(),match);
             }
             else
             {
-                st.nextToken();
+
                 System.out.println("In update");
-                String ms=st.nextToken()+","+st.nextToken();
-                main.mTable.get(ms);
-                main.mTable.get(ms).setScoreFirst(Integer.parseInt(st.nextToken()));
-                main.mTable.get(ms).setScoreLast(Integer.parseInt(st.nextToken()));
-                main.mTable.get(ms).setMinute(Integer.parseInt(st.nextToken()));
+
+                String ms=ft+" vs "+lt;
+                main.mTable.get(ms).setScoreFirst(Integer.parseInt(sf));
+                main.mTable.get(ms).setScoreLast(Integer.parseInt(sl));
+                main.mTable.get(ms).setMinute(Integer.parseInt(t));
             }
         }
     }

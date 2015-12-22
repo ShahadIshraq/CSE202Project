@@ -16,9 +16,9 @@ import java.util.Observable;
 
 public class Main extends Application {
     Stage stage;
-    ObservableList<Match> matches= FXCollections.observableArrayList();
+    ObservableList<sMatch> matches= FXCollections.observableArrayList();
     ObservableList<String> sMatches=FXCollections.observableArrayList();
-    Hashtable<String, Match> mTable=new Hashtable<>();
+    Hashtable<String, sMatch> mTable=new Hashtable<>();
 
     public static void main(String[] args) {
         launch(args);
@@ -49,13 +49,14 @@ public class Main extends Application {
         stage.show();
     }
 
-    public void showMatchPage(Match match)throws Exception{
+    public void showMatchPage(sMatch match)throws Exception{
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("match.fxml"));
         Parent root = loader.load();
         MatchController controller = loader.getController();
         controller.setMain(this);
+        controller.setMatch(match);
         controller.time.setText(match.getSimpleMinute());
         controller.team1.setText(match.getSimpleFirstTeam());
         controller.team2.setText(match.getLastTeam());
