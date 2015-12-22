@@ -20,7 +20,7 @@ public class MatchPageController {
     LocalDateTime startPoint;
     LocalDateTime secondStartPoint;
     LocalDateTime currentPoint;
-    int g1,g2,gameState=0;
+    int g1,g2,gameState;
     private Main main;
 
     @FXML
@@ -55,6 +55,25 @@ public class MatchPageController {
 
     public void setMatch(Match match) {
         this.match = match;
+        if(match.getMinute()==0) gameState=0;
+        else if(match.getMinute()<45){
+            gameState=1;
+            start.setText("Half Time");
+            startPoint=LocalDateTime.now().minusMinutes(match.getMinute());
+        }
+        else if(match.getMinute()==45) {
+            start.setText("Second Half Start");
+            gameState=2;
+        }
+        else if(match.getMinute()<90) {
+            start.setText("Second Half Finish");
+            gameState=3;
+            secondStartPoint=LocalDateTime.now().minusMinutes(match.getMinute());
+        }
+        else if(match.getMinute()==90) {
+            start.setOpacity(0.0);
+            gameState=4;
+        }
     }
 
 
@@ -101,26 +120,54 @@ public class MatchPageController {
 
     @FXML
     void addGoalTeam1(ActionEvent event) {
-        //match.setScoreLast(match.getScoreFirst()+1);
+        if(gameState!=1 && gameState!=3) return;
         score1.setText(String.valueOf(Integer.parseInt(score1.getText())+1));
         currentPoint=LocalDateTime.now();
-        int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(startPoint.getHour()*60*60+startPoint.getMinute()*60+startPoint.getSecond());
-        timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
-        //match.setMinute(time);
-        main.nc.write("g1");
-        main.nc.write(time);
+        if(gameState==1){
+            int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(startPoint.getHour()*60*60+startPoint.getMinute()*60+startPoint.getSecond());
+            timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
+            match.setMinute(time);
+            System.out.println("now: "+time);
+            main.nc.write("g1");
+            main.nc.write(time);
+        }
+        else if(gameState==3)
+        {
+            int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(secondStartPoint.getHour()*60*60+secondStartPoint.getMinute()*60+secondStartPoint.getSecond());
+            time=time+45*60;
+            timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
+            match.setMinute(time);
+            System.out.println("now: "+time);
+            main.nc.write("g1");
+            main.nc.write(time);
+        }
     }
 
     @FXML
     void addGoalTeam2(ActionEvent event) {
         //match.setScoreLast(match.getScoreLast() + 1);
+        if(gameState!=1 && gameState!=3) return;
         score2.setText(String.valueOf(Integer.parseInt(score2.getText())+1));
         currentPoint=LocalDateTime.now();
-        int time=currentPoint.getHour()*24*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(startPoint.getHour()*24*60+startPoint.getMinute()*60+startPoint.getSecond());
-        timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
-        //match.setMinute(time);
-        main.nc.write("g2");
-        main.nc.write(time);
+        if(gameState==1){
+            int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(startPoint.getHour()*60*60+startPoint.getMinute()*60+startPoint.getSecond());
+            timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
+            match.setMinute(time);
+            System.out.println("now: "+time);
+            main.nc.write("g2");
+            main.nc.write(time);
+        }
+        else if(gameState==3)
+        {
+            int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(secondStartPoint.getHour()*60*60+secondStartPoint.getMinute()*60+secondStartPoint.getSecond());
+            time=time+45*60;
+            timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
+            match.setMinute(time);
+            System.out.println("now: "+time);
+            main.nc.write("g2");
+            main.nc.write(time);
+        }
+
     }
 
     @FXML
@@ -138,6 +185,7 @@ public class MatchPageController {
         else if(gameState==3)
         {
             int time=currentPoint.getHour()*60*60+currentPoint.getMinute()*60+currentPoint.getSecond()-(secondStartPoint.getHour()*60*60+secondStartPoint.getMinute()*60+secondStartPoint.getSecond());
+            time=time+45*60;
             timer.setText(String.valueOf(time/60)+":"+String.valueOf(time%60));
             match.setMinute(time);
             System.out.println("now: "+time);

@@ -48,7 +48,10 @@ public class ContributorThread implements Runnable {
                 System.out.println(mtch.getMinute());
                 if(!main.clientList.isEmpty())for(NetworkUtil nc:main.clientList) nc.write("update,"+mtch.toString()+","+mtch.getScoreFirst()+","+mtch.getScoreLast()+","+mtch.getMinute());
             }
-            else if (m.equals("out")) break;
+            else if (m.equals("out")){
+                main.f.put(main.mTable.get(mtch),0);
+                break;
+            }
 
         }
     }

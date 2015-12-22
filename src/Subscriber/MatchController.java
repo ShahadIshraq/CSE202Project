@@ -1,5 +1,6 @@
 package Subscriber;
 
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -9,7 +10,7 @@ import CommonClasses.*;
 
 public class MatchController {
 
-
+    ObservableList<String> update;
 
     @FXML
     public Label time;
@@ -41,7 +42,7 @@ public class MatchController {
     private Button back;
 
     @FXML
-    private Button refresh;
+    public Button refresh;
 
     @FXML
     void backAction(ActionEvent event) {

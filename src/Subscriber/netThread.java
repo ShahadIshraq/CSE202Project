@@ -20,9 +20,12 @@ public class netThread implements Runnable{
     private Thread t;
     private NetworkUtil nc;
 
-    netThread(Main main)
+
+    netThread(Main main,NetworkUtil nc)
     {
+
         this.main=main;
+        this.nc=nc;
         t=new Thread(this);
         t.start();
     }
@@ -30,11 +33,7 @@ public class netThread implements Runnable{
 
     @Override
     public void run() {
-        String serverAddress = "127.0.0.1";
-        int serverPort = 33333;
-        nc = new NetworkUtil(serverAddress, serverPort);
-        System.out.println("Connected");
-        nc.write("client");
+
 
         while(true)
         {

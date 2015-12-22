@@ -10,6 +10,8 @@ package Subscriber;
         import javafx.scene.control.Button;
         import javafx.scene.control.ListView;
 
+        import static java.lang.System.exit;
+
 public class FirstController {
 
     @FXML
@@ -30,7 +32,8 @@ public class FirstController {
     @FXML
     void backAction(ActionEvent event) {
 
-
+        main.nc.write("oka bye");
+        exit(0);
         //Here will be the code of exit of client
     }
 

@@ -41,13 +41,16 @@ public class ServThread implements Runnable{
                 String p=st.nextToken();
 
                 System.out.println("got acc name: "+n+ " and pass: "+p);
-                if(main.mTable.containsValue(up))
-                {
-                    System.out.println("Matched");
-                    nc.write("oka");
-                    nc.write(main.cTable.get(up).toString());
-                    System.out.println("Match details sent");
-                    ContributorThread ct=new ContributorThread(this.main,nc,main.cTable.get(up));
+                if(main.mTable.containsValue(up)) {
+                    if(main.f.get(up)==1) nc.write("Already");
+                    else {
+                        System.out.println("Matched");
+                        nc.write("oka");
+                        nc.write(main.cTable.get(up).toString()+","+main.cTable.get(up).getScoreFirst()+","+main.cTable.get(up).getScoreLast()+","+main.cTable.get(up).getMinute());
+                        System.out.println("Match details sent");
+                        ContributorThread ct = new ContributorThread(this.main, nc, main.cTable.get(up));
+                        main.f.put(up,1);
+                    }
                 }
                 else nc.write("Alert");
 

@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import CommonClasses.*;
 
@@ -22,6 +23,7 @@ public class Main extends Application {
 
     Hashtable<String, Match> cTable=new Hashtable<>();
     Hashtable<Match, String> mTable=new Hashtable<>();
+    Hashtable<String,Integer> f=new Hashtable<>();
     ObservableList<Match> matches= FXCollections.observableArrayList();
 
     ObservableList<NetworkUtil> clientList=FXCollections.observableArrayList();

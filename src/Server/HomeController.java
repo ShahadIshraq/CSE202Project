@@ -72,6 +72,7 @@ public class HomeController {
         main.matches.add(match);
         main.cTable.put(contributor, match);
         main.mTable.put(match,contributor);
+        main.f.put(contributor,0);
         //main.contributors.add(contributor);
         addTeam1.setText(null);
         addTeam2.setText(null);

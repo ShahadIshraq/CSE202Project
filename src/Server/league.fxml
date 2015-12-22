@@ -5,9 +5,9 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.HomeController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="628.0" style="-fx-background-image: url('footballfield.jpg');" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Server.HomeController">
    <children>
-      <TableView fx:id="Scorecard" editable="true" layoutX="30.0" layoutY="97.0" prefHeight="184.0" prefWidth="565.0">
+      <TableView fx:id="Scorecard" editable="true" layoutX="30.0" layoutY="97.0" opacity="0.8" prefHeight="184.0" prefWidth="565.0">
         <columns>
           <TableColumn fx:id="Time" prefWidth="79.0" text="Time" />
           <TableColumn fx:id="Team1" prefWidth="140.0" text="Team 1" />
@@ -25,12 +25,12 @@
          <font>
             <Font name="Cambria" size="30.0" />
          </font></Label>
-      <TextField fx:id="addTeam1" layoutX="83.0" layoutY="318.0" prefHeight="25.0" prefWidth="149.0" promptText="First Team Name" />
-      <TextField fx:id="addTeam2" layoutX="259.0" layoutY="318.0" prefHeight="25.0" prefWidth="149.0" promptText="Last Team Name" />
-      <Button fx:id="addMatchButton" layoutX="429.0" layoutY="343.0" mnemonicParsing="false" onAction="#addMatchAction" text="Add Match" />
+      <TextField fx:id="addTeam1" layoutX="83.0" layoutY="318.0" opacity="0.8" prefHeight="25.0" prefWidth="149.0" promptText="First Team Name" />
+      <TextField fx:id="addTeam2" layoutX="259.0" layoutY="318.0" opacity="0.8" prefHeight="25.0" prefWidth="149.0" promptText="Last Team Name" />
+      <Button fx:id="addMatchButton" layoutX="429.0" layoutY="343.0" mnemonicParsing="false" onAction="#addMatchAction" opacity="0.8" text="Add Match" />
       <Label layoutX="277.0" layoutY="293.0" text="Add a New Match" />
       <Label layoutX="241.0" layoutY="322.0" text="vs" />
-      <TextField fx:id="contributorName" layoutX="83.0" layoutY="356.0" promptText="Contributor Name" />
-      <TextField fx:id="contributorPassword" layoutX="259.0" layoutY="356.0" promptText="password" />
+      <TextField fx:id="contributorName" layoutX="83.0" layoutY="356.0" opacity="0.8" promptText="Contributor Name" />
+      <TextField fx:id="contributorPassword" layoutX="259.0" layoutY="356.0" opacity="0.8" promptText="password" />
    </children>
 </AnchorPane>

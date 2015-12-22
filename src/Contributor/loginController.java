@@ -50,12 +50,23 @@ public class loginController {
                 alert.setContentText("The username and password you provided is not correct.");
                 alert.showAndWait();
             }
+            if (m.equals("Already")) {
+                System.out.println("Error: Alreeady logged in");
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Alrerady logged in");
+                alert.setHeaderText("Alrerady logged in");
+                alert.setContentText("This user is currently logged in.");
+                alert.showAndWait();
+            }
             if (m.equals("oka")) {
                 System.out.println("Got access");
                 String mt = (String) main.nc.read();
-                System.out.println("atch detail: " + mt);
+                System.out.println("match detail: " + mt);
                 StringTokenizer st = new StringTokenizer(mt, ",");
                 Match match = new Match(st.nextToken(), st.nextToken());
+                match.setScoreFirst(Integer.parseInt(st.nextToken()));
+                match.setScoreLast(Integer.parseInt(st.nextToken()));
+                match.setMinute(Integer.parseInt(st.nextToken()));
                 try {
                     main.showUpdatePage(match);
                 } catch (Exception E) {

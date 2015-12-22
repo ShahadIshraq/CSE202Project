@@ -67,6 +67,7 @@ public class Match implements Serializable {
         simpleMinute.set(String.valueOf(minute));
 ;    }
 
+
     public String getSimpleFirstTeam() {
         return simpleFirstTeam.get();
     }
